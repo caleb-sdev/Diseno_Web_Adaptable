@@ -1,0 +1,208 @@
+<!--
+Qué son los elementos div y cuándo deberías usarlos
+El elemento div se usa como contenedor para agrupar otros elementos.
+
+Aquí tienes un ejemplo de un elemento div. Agrega otro elemento párrafo dentro del elemento div y observa los cambios en la ventana de vista previa. Para ver las vistas previas, necesitarás activar el editor interactivo.
+
+<div>
+  <p>Example paragraph element.</p>
+</div>
+Principalmente usarás el elemento div cuando quieras agrupar elementos HTML que compartirán un conjunto de estilos CSS. Aprenderás más sobre CSS en futuras lecciones y talleres.
+
+Aunque el elemento div se usa comúnmente en bases de código del mundo real, debes tener cuidado de no usarlo en exceso. Hay ocasiones en las que otro elemento sería más apropiado.
+
+Por ejemplo, si quieres dividir tu contenido en secciones, entonces el elemento section sería más apropiado que un elemento div.
+
+Agrega otro elemento section debajo del primero. Luego, dentro del elemento section, agrega elementos h2 y p. Puedes usar el texto que quieras y verás los cambios en la ventana de vista previa. Para interactuar con el ejemplo, necesitarás habilitar el editor interactivo.
+
+<section>
+  <h2>Mammals</h2>
+  <p>
+    Mammals are warm-blooded animals with fur or hair. Most give birth to live
+    young.
+  </p>
+  <ul>
+    <li>Lion</li>
+    <li>Elephant</li>
+    <li>Dolphin</li>
+  </ul>
+</section>
+El elemento section tiene significado semántico sobre el elemento div, que no es semántico. La semántica es el significado de palabras o frases en un idioma. En HTML, que es un idioma, los elementos también tienen su propio significado semántico. Esto significa que si usas un elemento section, el navegador captará su significado semántico y sabrá tratarlo como una sección, ya sea en escritorios, móviles o donde sea.
+-->
+
+¿Qué significado semántico tiene un elemento div?
+
+El elemento div no tiene significado semántico.
+
+¿Cuándo es más apropiado usar un elemento div en tu HTML?
+
+Al agrupar contenido relacionado con fines de estilo.
+
+¿Cuál de los siguientes elementos HTML se usa comúnmente para agrupar contenido en secciones distintas?
+
+section
+
+<!--
+¿Qué son los IDs y las clases, y cuándo debes usarlos?
+El atributo id añade un identificador único a un elemento HTML.
+
+Aquí tienes un ejemplo de un elemento h1 con un id de title.
+
+Debajo del elemento h1, agrega un elemento h2 con un id establecido en "subtitle". Puedes escribir el texto que quieras para el h2 y verás los cambios en la ventana de vista previa. Para interactuar con el ejemplo, necesitarás habilitar el editor interactivo.
+
+<h1 id="title">Movie Review Page</h1>
+
+Puedes hacer referencia al nombre id de title dentro de tu JavaScript o CSS. Aquí tienes un ejemplo de CSS que hace referencia al id de title para cambiar el color del texto a red.
+
+NOTA: Se ha proporcionado algo de CSS para ti en este ejemplo interactivo. No te preocupes por tratar de entender el código CSS porque aprenderás más sobre eso en lecciones futuras. Pero si quieres ver el cambio del color del texto a azul, activa el editor interactivo, haz clic en la pestaña styles.css y cambia color: red; a color: blue;.
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+       name="viewport"
+       content="width=device-width, initial-scale=1.0" />
+    <title>Review page Example</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Movie Review Page</h1>
+  </body>
+</html>
+#title {
+  color: red;
+}
+El símbolo de almohadilla (#) delante de title indica a la computadora que quieres seleccionar un id con ese valor. Los nombres de id no deben usarse más de una vez y siempre deben ser únicos. Otra cosa a tener en cuenta sobre los valores de id es que no pueden contener espacios. Aquí tienes un ejemplo de cómo aplicar las palabras main y heading a un valor del atributo id:
+
+<h1 id="main heading">Main heading</h1>
+Los navegadores verán este espacio como parte del id, lo que causará problemas no deseados al momento de aplicar estilos y scripts. Los valores del atributo id solo deben contener letras, dígitos, guiones bajos y guiones.
+
+En contraste con el atributo id, el valor del atributo class no necesita ser único y puede contener espacios.
+
+Aquí tienes un ejemplo de cómo aplicar una clase llamada box a un elemento div.
+
+<div class="box"></div>
+Si quieres agregar múltiples nombres de clase a un elemento, puedes hacerlo separando los nombres con un espacio. Aquí tienes un ejemplo actualizado aplicando múltiples clases a un elemento div.
+
+<div class="box red-box"></div>
+Aquí tienes otro ejemplo de cómo aplicar múltiples clases a varios elementos div.
+
+NOTA: Se ha proporcionado algo de CSS para ti en este ejemplo interactivo. No te preocupes por tratar de entender el código CSS porque aprenderás más sobre eso en lecciones futuras. Pero si quieres cambiar el color de las cajas primera y tercera, activa el editor interactivo y haz clic en la pestaña styles.css y cambia background-color: red; por background-color: black;.
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+       name="viewport"
+       content="width=device-width, initial-scale=1.0" />
+    <title>Colored boxes example</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="box red-box"></div>
+    <div class="box blue-box"></div>
+    <div class="box red-box"></div>
+    <div class="box blue-box"></div>
+  </body>
+</html>
+.box {
+  width: 100px;
+  height: 100px;
+}
+
+.red-box {
+  background-color: red;
+}
+
+.blue-box {
+  background-color: blue;
+}
+Entonces, para recapitular, ¿cuándo debes usar un id en lugar de una class? Las clases son mejores para usar cuando quieres aplicar un conjunto de estilos a muchos elementos. Si quieres apuntar a un elemento específico, es mejor usar un id porque esos valores deben ser únicos.
+
+
+-->
+
+¿Cuándo debes usar un id en lugar de una class?
+Utiliza un id cuando necesites un identificador único para un elemento específico, y usa una class cuando quieras aplicar estilos o comportamiento a múltiples elementos.
+
+¿Qué sucede si utilizas el mismo id más de una vez en tu HTML?
+Esto puede llevar a resultados no deseados y problemas al intentar aplicar estilos o al dirigirnos a un elemento en JavaScript.
+
+¿Cuál de los siguientes no es un valor correcto para el atributo id?
+id="main heading"
+
+<!--
+¿Qué son las entidades HTML y cuáles son algunos ejemplos comunes?
+Una entidad HTML, o referencia de carácter, es un conjunto de caracteres utilizados para representar un carácter reservado en HTML.
+
+Supongamos que quieres mostrar el texto This is an <img/> element en la pantalla. Si usas el código que está actualmente en el editor, no mostrará el resultado deseado. Incluso si añadieras los atributos src y alt al ejemplo, se mostraría una imagen en medio del párrafo. No es el resultado deseado. Para interactuar con el ejemplo, necesitarás habilitar el editor interactivo.
+
+<p>This is an <img /> element</p>
+Cuando el analizador de HTML ve el símbolo de menor que (<) seguido por el nombre de una etiqueta HTML, lo interpreta como un elemento HTML. Por eso no obtienes el resultado deseado de This is an <img/> element en la pantalla.
+
+Para solucionar este problema, puedes usar entidades HTML. Aquí tienes un ejemplo actualizado que usa las entidades HTML correctas para los símbolos menor que (<) y mayor que (>). Ahora deberías ver This is an <img/> element en la pantalla.
+
+Activa el editor interactivo e intenta agregar un &lt;p&gt;learning is fun&lt;/p&gt; debajo del elemento párrafo. Deberías ver <p>learning is fun</p> en la pantalla.
+
+<p>This is an &lt;img /&gt; element</p>
+
+Estos tipos de referencias de carácter se conocen como referencias de carácter nombradas. Named references start with an ampersand sign (&) and end with a semicolon (;). Al usar una referencia de carácter nombrada, el analizador HTML no confundirá esto con un elemento HTML real.
+
+Otro tipo de referencia de carácter sería la referencia numérica decimal. Esta referencia de carácter comienza con un signo de ampersand y símbolo de almohadilla (#), seguido por uno o más dígitos decimales, terminando con un punto y coma.
+
+Aquí tienes un ejemplo de cómo usar la referencia numérica decimal para el símbolo de menor que.
+
+Activa el editor interactivo y cambia el código para ver diferentes símbolos. Puedes usar &#169; para el símbolo de copyright y &#174; para el símbolo de marca registrada.
+
+&#60;
+El último tipo de referencia de carácter sería la referencia numérica hexadecimal. Esta referencia de carácter comienza con un signo de ampersand, símbolo de almohadilla y la letra x. Luego es seguida por uno o más dígitos hexadecimales ASCII y termina con un punto y coma.
+
+Aquí tienes un ejemplo de cómo usar la referencia numérica hexadecimal para el símbolo de menor que.
+
+Activa el editor interactivo y cambia el código para ver diferentes símbolos. Puedes usar &#x20AC; para el símbolo del euro y &#x03A9; para la letra griega mayúscula Omega.
+
+&#x3C;
+-->
+
+¿Qué es una entidad HTML (referencia de carácter)?
+
+Un conjunto de caracteres usados para representar un carácter reservado en HTML.
+
+
+¿Cuáles son los tres tipos de referencias de carácter?
+
+Referencias de carácter nombradas, numéricas decimales y numéricas hexadecimales.
+
+¿Cuál de las siguientes es la sintaxis correcta para una referencia de carácter nombrada?
+
+&amp;
+
+<!--
+¿Cuál es el papel del elemento de script en HTML, y cómo se puede usar para enlazar archivos JavaScript externos?
+El elemento script se usa para incrustar código ejecutable. La mayoría de los desarrolladores utilizarán esto para ejecutar código JavaScript. Se utiliza JavaScript para añadir interactividad a sus páginas web. Ejemplos comunes de uso de JavaScript incluyen juegos interactivos, carruseles de imágenes y formularios dinámicos que validan la entrada del usuario en tiempo real.
+
+Aquí tienes un ejemplo de cómo usar el elemento script en un documento HTML. Quita el // que está delante de alert("Welcome to freeCodeCamp"); y deberías ver que aparece una alerta. Para ver las vistas previas, necesitarás activar el editor interactivo.
+
+<body>
+  <script>
+    // alert("Welcome to freeCodeCamp");
+  </script>
+</body>
+Aunque técnicamente puedes escribir todo tu código JavaScript dentro de las etiquetas script, se considera una buena práctica enlazar a un archivo JavaScript externo. Aquí hay un ejemplo de cómo usar el elemento script para enlazar a un archivo JavaScript externo:
+
+<script src="path-to-javascript-file.js"></script>
+El atributo src se usa aquí para especificar la ubicación de ese archivo JavaScript externo. src significa "source" (fuente). La razón por la que no se recomienda colocar todo tu JavaScript dentro del documento HTML es por la separación de preocupaciones. La separación de preocupaciones es un principio de diseño donde separas tus programas en secciones distintas y cada sección aborda una preocupación distinta. En este caso, queremos separar nuestro código JavaScript de nuestro código HTML.
+
+
+-->
+
+¿Qué atributo se utiliza para enlazar un archivo JavaScript externo?
+El atributo src.
+
+¿Qué es la separación de preocupaciones?
+Un principio de diseño donde separas tus programas en secciones distintas y cada sección aborda una preocupación distinta.
+
+¿Cuál de las siguientes es la sintaxis correcta para enlazar un archivo JavaScript externo?
+<script src="path-to-javascript-file.js"></script>
